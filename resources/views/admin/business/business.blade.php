@@ -1,8 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Business') }}
-        </h2>
+        <div class="ml-6">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Business') }}
+            </h2>
+        </div>
+        <div class="flex items-center justify-end mt-4">
+            <x-button class="ml-4 text-right">
+                <a href="{{ route('createbusiness') }}">
+                    {{ __('Register') }}
+                </a>
+            </x-button>
+        </div>
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -18,7 +27,6 @@
                                 <th scope="col" class="px-6 py-3">City</th>
                                 <th scope="col" class="px-6 py-3">State</th>
                                 <th scope="col" class="px-6 py-3">Description</th>
-                                <th scope="col" class="px-6 py-3"><span class="sr-only">Edit</span></th>
                             </tr>
                         </thead>
                         <tbody>

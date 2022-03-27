@@ -9,7 +9,7 @@ class BusinessServices
     public static function getAllBusiness()
     {
         $busicess = Business::orderBy('name')
-                                ->paginate(1);
+                                ->paginate(10);
 
         return $busicess;
     }
@@ -31,5 +31,24 @@ class BusinessServices
         } else {
             return false;
         }
+    }
+
+    public static function getByIdBusiness($idBusicess)
+    {
+        $busicess = Business::orderBy('name')
+                                ->find($idBusicess);
+
+        return $busicess;
+    }
+
+    public static function getSearchBusiness($requestSearch)
+    {
+        $busicess = Business::where('name', 'LIKE', '%' . $requestSearch . '%')
+                        ->orWhere('address', 'LIKE', '%'. $requestSearch .'%')
+                        ->orWhere('zip_code', 'LIKE', '%'. $requestSearch .'%')
+                        ->orWhere('city', 'LIKE', '%'. $requestSearch .'%')
+                        ->paginate(10);
+
+        return $busicess;
     }
 }

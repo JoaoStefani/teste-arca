@@ -8,9 +8,13 @@
     <!-- Validation Errors -->
     <x-auth-validation-errors class="mb-12 text-center" :errors="$errors" />
 
-    <x-auth-validation-errors class="mb-12 text-center" :errors="$errors" />
-    @if(session()->has('message'))
+    <x-message-success class="mb-12 text-center" :errors="$errors" />
+    @if(session()->has('success'))
+        <x-message-success class="mb-12 text-center" :success="session()->get('success')" />
+    @endif
 
+    @if(session()->has('error'))
+        <x-message-success class="mb-12 text-center" :errors="session()->get('error')" />
     @endif
 
     <x-cart>

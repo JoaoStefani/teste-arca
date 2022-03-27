@@ -30,9 +30,9 @@ class BusinessController extends Controller
         $busicess = BusinessServices::saveBusiness($request);
 
         if ($busicess) {
-            return redirect()->back()->with('success', 'IT WORKS!');
+            return redirect()->back()->with('success', 'Save successfully');
         }
 
-        return redirect()->back()->with('error', 'IT WORKS!');
+        return redirect()->back()->with('error', 'An error has occurred, please contact the Administrator');
     }
 }
