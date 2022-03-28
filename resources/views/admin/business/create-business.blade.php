@@ -61,7 +61,14 @@
 
                 <x-input id="description" class="block mt-1 w-full" type="text" name="description" :value="old('description')" required/>
             </div>
+            {{-- <div class="mt-4">
 
+                <x-label for="description" :value="__('Description')" />
+
+                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+
+            </div> --}}
             <div class="flex items-center justify-end mt-4">
                 <x-button class="ml-4">
                     {{ __('Register') }}
