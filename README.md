@@ -13,5 +13,5 @@
 - Executar composer update
 - Executar npm install
 - Executar php artisan migrate, para criação das tabelas
-- Executar php artisan db:seed --class=BusinessSeeder de pois php artisan db:seed --class=CategoriesSeeder
+- Executar php artisan db:seed --class=BusinessSeeder depois php artisan db:seed --class=CategoriesSeeder
 - Executar php artisan serve
